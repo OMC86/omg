@@ -2,19 +2,20 @@
  * Created by Chris on 28/11/2017.
  */
 angular.module('OmgApp', [
-    'ui.router',
+    'ngRoute'
 ])
 
-    .config(function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise('/')
+.config(function($locationProvider, $routeProvider){
+    $locationProvider.html5Mode(true);  // Enable href routing without hashes
 
-        $stateProvider
+	$routeProvider
 
-            .state('home', {
-                url: '/',
-                templateUrl: 'components/home.html'
-            })
-    })
+	.when('/', {
+        templateUrl: 'app/components/home/home.html',
+	    controller: 'HomeCtrl'
+	})
+
+});
 
 
 
