@@ -1,0 +1,19 @@
+{
+  "name": "bell_omg",
+  "version": "1.0.0",
+  "description": "AngularJS front end web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OMC86/omg.git"
+  },
+  "author": "Chris_T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OMC86/omg/issues"
+  },
+  "homepage": "https://github.com/OMC86/omg#readme"
+}
