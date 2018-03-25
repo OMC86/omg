@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html data-ng-app="OmgApp">
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><! <html lang="en" ng-app="myApp" class="no-js"> --><!--<![endif]-->
 <head>
   <base href="/"> <!-- needed for Angular HTML5 mode -->
   <title>Oh My Gilatte</title>
@@ -13,32 +9,38 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="app/base.css">
+  <link rel="stylesheet" type="text/css" href="app/components/landing/landing.css">
   <link rel="stylesheet" type="text/css" href="app/directives/nav/nav.css">
+  <link rel="stylesheet" type="text/css" href="app/components/home/home.css">
+  <link rel="stylesheet" type="text/css" href="app/directives/carousel/carousel.css">
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-  <style type="text/css">
-        body {
-            padding-top: 70px;
-        }
-    </style>
+    
 </head>
-<body>
-  <nav-bar></nav-bar>
-  <!--[if lt IE 7]>
-      <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">
-        upgrade your browser</a> to improve your experience.
-      </p>
-  <![endif]-->
-
-  <div>Angular OMG</div>
-  <div ng-view></div>
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-
+<body><!--
+  <header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id='logo-container'>
+          <img id='logo' src='app/assets/omg_Circular.png' alt='Oh My Galette'>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <div class="container-fluid">
+    <nav-bar ng-controller="NavCtrl"></nav-bar>
+-->
+    <div ng-view></div>
+  </div>
 
   <script src="app/app.js"></script>
   <script src="app/directives/nav/nav.js"></script>
+  <script src="app/directives/nav/navCtrl.js"></script>
   <script src="app/components/home/homeCtrl.js"></script>
+  <script src="app/directives/carousel/carousel.js"></script>
+  <script src="app/directives/carousel/carouselCtrl.js"></script>
 </body>
 </html>
